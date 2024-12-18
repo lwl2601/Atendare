@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Image from "next/image";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -28,6 +29,21 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Image
+          src="https://web.atendare.com/images/logo/atendare_logo.svg"
+          alt="Logo do Atendare"
+          width={300}
+          height={100}
+          priority={true}
+          style={{
+            position: "absolute",
+            bottom: "650px", // Fixa a 10px da borda inferior
+            left: "50%", // Centraliza horizontalmente
+            transform: "translateX(-50%)", // Ajusta para que o centro da imagem fique alinhado
+            objectFit: "contain", // Garante que a imagem seja exibida proporcionalmente
+            objectPosition: "center",
+          }}
+        />
       </body>
     </html>
   );

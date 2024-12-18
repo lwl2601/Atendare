@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  
+}
+@font-face {
+  font-family: 'SuaFonte';
+  src: url('/assets/fonts/suaFonte.woff2') format('woff2'); /* Ajuste o caminho para a sua fonte */
+  font-display: swap; /* O texto será visível com fontes alternativas até a fonte personalizada ser carregada */
+}
+
+
